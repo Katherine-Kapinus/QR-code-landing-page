@@ -1,65 +1,127 @@
 @import 'nullstyle';
 
-body {
-    background-color: #D5E1EF;
-    font-family: "Outfit",sans-serif;
-    font-size: 15px;
-    line-height: 21px;
-    letter-spacing: .2px;
-    color: #1f314f;
-    text-align: center;
+
+body{
+      font-family: 'Inter', sans-serif;
+      color: #fff;
 }
-    
-.wrapper{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.wrapper {
+      background-color: hsl(0, 0%, 8%);
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 }
-
-
 .card {
-    background-color: #fff;
-    border-radius: 17px;
-    max-width: 320px;
-    padding: 16px;
-    box-shadow: 0 20px 50px  rgba(118, 128, 145, 0.4);
+      flex: 0 1 420px;
+      background-color:  hsl(0, 0%, 12%);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      width: 100%;
+      border-radius: 15px;
+      margin: 15px;
 
-    
-    &__content {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-    }
+		&__container {
+            padding: 45px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 26px;
+            align-items: center;
+            text-align: center;
+                  @media (max-width: 425px) {
+                        padding: 30px 20px;
+                        gap: 20px;
+                  }            
+		}
 
-    &__qr-code {
-        border-radius: 10px;
-        width: 100%;
-        overflow: hidden;
-        & img {
-            max-width: 288px;
+		&__body {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            text-align: center;            
+		}
+            
+
+		&__image {
+            max-width: 90px;
+            height: 100%;
+            width: 100%;
             object-fit: cover;
-        }
-    }
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 2px rgba(0, 0, 0, 0.15);
+            aspect-ratio: 1 / 1;
+            margin-bottom: 20px;
+            @media (max-width: 425px) {
+                  margin-bottom: 2px;
+                  max-width: 80px;
+            }      
+            & img{
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+            }
+      }
+}
+.user {
 
-    &__text {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        padding-bottom: 24px;
-        margin-inline: 5%;
-    }
+		&__name {
+            font-weight: 700;
+            font-size: 28px;
+            @media (max-width: 425px) {
+                  font-size: 24px;
+                  
+            }
+		}
 
-    &__title {
-        font-size: 22px;
-        font-weight: 700;
-        line-height: 26px;
-    }
+		&__origin {
+            font-weight: 600;
+            color: hsl(75, 94%, 57%);
+            margin-bottom: 16px;
+            @media (max-width: 425px) {
+                  margin-bottom: 8px;
+                  font-size: 14px;
+            }      
+		}
 
-    &__description {
-    color: #68778d;
+		&__specialization {
+            font-size: 14px;
+		}
+}
+.buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 360px;
+      width: 100%;
+		&__button {
+            background-color:  hsl(0, 0%, 20%);
+            padding: 16px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+                  &:hover{
+                        cursor: pointer;
+                        background-color: hsl(75, 94%, 57%) ;
+                        .button__link {
+                              color: hsl(0, 0%, 8%);
+                        }
+                  }
+                  &:active{
+                        transform: scale(0.95);
+                  }
+		}
+}
+.button {
 
-    }
+      &__link {
+      color: #fff;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s ease;
+      @media (max-width: 425px) {
+            font-size: 14px;
+            
+      }      
+      }
 }

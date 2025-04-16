@@ -3,24 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link href="https://fonts.googleapis.com/css?family=Outfit:regular,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inter:regular,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shourtcut icon" href="img/favicon-32x32.png">
-    <title>QR-code</title>
+    <link rel="shourtcut icon" href="img/favicon-32x32.ico" type="image/x-icon">
+    <title>Mentor 3</title>
 </head>
 <body>
-    <div class="wrapper">
+    <main class="wrapper">
         <div class="card">
-            <div class="card__content">
-                <div class="card__qr-code">
-                    <img src="img/image-qr-code.png" alt="QR Code">
+            <div class="card__container">
+                <div class="card__body user">
+                    <div class="card__image">
+                        <img src="img/avatar-jessica.jpeg" alt="Jessica Randall avatar">
+                    </div>
+                    <h1 class="user__name">Jessica Randall</h1>
+                    <h2 class="user__origin">London, United Kingdom</h2>
+                    <p class="user__specialization">"Front-end developer and avid reader."</p>
                 </div>
-                <div class="card__text">
-                    <h2 class="card__title">Improve your front-end skills by building projects</h2>
-                    <p class="card__description">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
-                </div>
+                <ul class="card__buttons buttons">
+                    <li class="buttons__button">
+                        <a href="https://github.com/Katherine-Kapinus" aria-label="GitHub" class="button__link">GitHub</a>
+                    </li>
+                    <li class="buttons__button">
+                        <a href="https://www.frontendmentor.io/home" aria-label="Frontend Mentor" class="button__link">Frontend Mentor</a>
+                    </li>
+                    <li class="buttons__button">
+                        <a href="https://www.linkedin.com/feed/" aria-label="Linkedin" class="button__link">LinkedIn</a>
+                    </li>
+                    <li class="buttons__button">
+                        <a href="https://x.com" aria-label="Twitter" class="button__link">Twitter</a>
+                    </li>
+                    <li class="buttons__button">
+                        <a href="https://www.instagram.com" aria-label="Instagram" class="button__link">Instagram</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>
